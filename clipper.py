@@ -1,4 +1,5 @@
 import time
+import config
 import requests
 import re
 import concurrent.futures
@@ -6,14 +7,7 @@ from selenium import webdriver
 from dl_clips import *
 
 # reddit api info
-CLIENT_ID = "***REMOVED***"
-SECRET_KEY = "***REMOVED***"
-auth = requests.auth.HTTPBasicAuth(CLIENT_ID, SECRET_KEY)
-data = {
-	"grant_type" : "password",
-	"username" : "***REMOVED***",
-	"password" : "***REMOVED***"
-}
+auth = requests.auth.HTTPBasicAuth(config.CLIENT_ID, config.SECRET_KEY)
 
 # returns a list of strings of the twitch clips
 def getListOfClips(page_html: str):
@@ -28,11 +22,10 @@ def getListOfClips(page_html: str):
 
 # RETURNS REDDIT JSON TEXT
 def getRedditJSONText(numPosts: int) -> str:
-    headers = {"User-Agent" : "***REMOVED***"}
-    res = requests.post("https://www.reddit.com/api/v1/access_token", auth=auth, data=data, headers=headers)
+    res = requests.post("https://www.reddit.com/api/v1/access_token", auth=auth, data=config.data, headers=config.headers)
     TOKEN = res.json()["access_token"]
-    headers["Authorization"] = f"bearer{TOKEN}"
-    res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=headers, params={'limit' : f'{numPosts}'}) # limit is actually limit -1
+    config.headers["Authorization"] = f"bearer{TOKEN}"
+    res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=config.headers, params={'limit' : f'{numPosts}'}) # limit is actually limit -1
     return res.text
 
 # checks if clip is missing or not
@@ -72,9 +65,9 @@ valid_clip_list = verifiedClipsList(clip_list)
 print(valid_clip_list)
 print()
 
-my_mp4_list = twDLLinkList(valid_clip_list) # list includes links and title as tuple
-print(my_mp4_list)
+# my_mp4_list = twDLLinkList(valid_clip_list) # list includes links and title as tuple
+# print(my_mp4_list)
 
-download_list_of_MP4s(my_mp4_list)
+# download_list_of_MP4s(my_mp4_list)
 
 print("Process finished --- %s seconds ---" % (time.time() - start_time))
