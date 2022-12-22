@@ -4,8 +4,11 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import requests
 
-# returns a tuple of (link to mp4, clip title)
+
 def genTwClipsDLLink(clip_url: str):
+    """
+    returns a tuple of (link to mp4, clip title)    
+    """
     # makes selenium 'headless' (NO UI)
     options = webdriver.FirefoxOptions()
     options.headless = True
@@ -36,24 +39,24 @@ def genTwClipsDLLink(clip_url: str):
     driver.quit()
     return (mp4link, clipTitle)
 
-# print(genTwClipsDLLink('https://www.twitch.tv/ratirl/clip/HonestNiceEchidnaBleedPurple-9RuOFX2tI9lzXJ67'))
 
-# valid links as arg
-# generates list of links of mp4 from valid links
 def twDLLinkList(valid_links_list: list):
+    """
+    valid links as arg \n
+    generates list of links of mp4 from valid links
+    """
     mp4List = []
     for valid_link in valid_links_list:
         mp4List.append(genTwClipsDLLink(valid_link))
     return mp4List
 
 
-
-
-
-# downloads single mp4 from web
-# downloads end in Downloads directory
-def downloadFile(name, url):
-    name = name + ".mp4"
+def downloadMP4(url, title):
+    """
+    downloads single mp4 from web.
+    downloads end in Downloads directory
+    """
+    name = title + ".mp4"
     r = requests.get(url)
     print("****Connected****")
     f = open(f'/Users/rellamas/Downloads/{name}', 'wb')
@@ -63,4 +66,11 @@ def downloadFile(name, url):
             f.write(chunk)
     print("Done")
     f.close()
-# downloadFile('n1', 'https://clips-media-assets2.twitch.tv/9GYxs7N-b1oFGq5G0kolbA/AT-cm%7C9GYxs7N-b1oFGq5G0kolbA.mp4')
+
+
+
+def download_list_of_MP4s(mp4List: list):
+    """
+    downloads a from a list of links to MP4s
+    """
+    [downloadMP4(clipElement[0], clipElement[1]) for clipElement in mp4List]

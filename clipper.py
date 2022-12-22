@@ -27,12 +27,12 @@ def getListOfClips(page_html: str):
 
 
 # RETURNS REDDIT JSON TEXT
-def getRedditJSONText() -> str:
+def getRedditJSONText(numPosts: int) -> str:
     headers = {"User-Agent" : "***REMOVED***"}
     res = requests.post("https://www.reddit.com/api/v1/access_token", auth=auth, data=data, headers=headers)
     TOKEN = res.json()["access_token"]
     headers["Authorization"] = f"bearer{TOKEN}"
-    res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=headers, params={'limit' : '3'}) # limit is actually limit -1
+    res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=headers, params={'limit' : f'{numPosts}'}) # limit is actually limit -1
     return res.text
 
 # checks if clip is missing or not
@@ -66,11 +66,15 @@ def verifiedClipsList(clip_list: list):
 # main function
 start_time = time.time()
 
-clip_list = getListOfClips(getRedditJSONText())
+numPosts = 3
+clip_list = getListOfClips(getRedditJSONText(numPosts))
 valid_clip_list = verifiedClipsList(clip_list)
 print(valid_clip_list)
+print()
 
-my_mp4_list = twDLLinkList(valid_clip_list)
+my_mp4_list = twDLLinkList(valid_clip_list) # list includes links and title as tuple
 print(my_mp4_list)
+
+download_list_of_MP4s(my_mp4_list)
 
 print("Process finished --- %s seconds ---" % (time.time() - start_time))
