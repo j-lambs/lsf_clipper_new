@@ -1,9 +1,9 @@
 import time
-start_time = time.time()
+
 
 import requests
 import re
-
+import concurrent.futures
 from selenium import webdriver
 
 # reddit api info
@@ -39,7 +39,7 @@ def getRedditJSONText():
 # checks if clip is missing or not
 # true = clip still public
 # false = clip deleted or taken down 
-def checkClipValidity(url):
+def verifyClip(url):
 	# makes selenium 'headless' (NO UI)
 	options = webdriver.FirefoxOptions()
 	options.headless = True
@@ -47,7 +47,7 @@ def checkClipValidity(url):
 	driver = webdriver.Firefox(options=options)
 	driver.get(url=url)
 
-	time.sleep(1) # need to wait to see if change to clip_missing page
+	time.sleep(0.2) # need to wait to see if change to clip_missing page
 
 	current_url = driver.current_url
 	driver.close() # close selenium window
@@ -58,8 +58,20 @@ def checkClipValidity(url):
 # main function
 # print(getListOfClips(getRedditJSONText()))
 
-print(checkClipValidity("https://clips.twitch.tv/GrossWonderfulElephantDuDudu"))
-print(checkClipValidity("https://clips.twitch.tv/GoldenVastLardMrDestructoid-ZI9pmwNIxd2bs6qU"))
+clip_list = ["https://clips.twitch.tv/GrossWonderfulElephantDuDudu", "https://clips.twitch.tv/GoldenVastLardMrDestructoid-ZI9pmwNIxd2bs6qU", 'https://clips.twitch.tv/ResourcefulBlazingOrangeRickroll-_h6gwcP1trSICki6', 'https://clips.twitch.tv/BreakableAgileStarTinyFace-3Hy5uA8IrxRcHyH9', 'https://clips.twitch.tv/ApatheticDeafDeerBrokeBack-TZdRX-muKwkcMfxj', 'https://clips.twitch.tv/CrunchyBreakableRedpandaMVGame-ShiYzEMiIJSQJAAR']
+
+# multiprocess test
+start_time = time.time()
+with concurrent.futures.ProcessPoolExecutor() as executor:
+	results = executor.map(verifyClip, clip_list)
+	for res in results:
+		print(res)
 
 # execution timer
+print("Process finished --- %s seconds ---" % (time.time() - start_time))
+
+# one at a time
+start_time = time.time()
+for i in clip_list:
+	verifyClip(i)
 print("Process finished --- %s seconds ---" % (time.time() - start_time))
