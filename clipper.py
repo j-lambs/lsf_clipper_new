@@ -32,7 +32,7 @@ def getRedditJSONText() -> str:
     res = requests.post("https://www.reddit.com/api/v1/access_token", auth=auth, data=data, headers=headers)
     TOKEN = res.json()["access_token"]
     headers["Authorization"] = f"bearer{TOKEN}"
-    res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=headers, params={'limit' : '6'}) # limit is actually limit -1
+    res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=headers, params={'limit' : '3'}) # limit is actually limit -1
     return res.text
 
 # checks if clip is missing or not
@@ -65,8 +65,8 @@ def verifiedClipsList(clip_list: list):
 
 # main function
 start_time = time.time()
-clip_list = getListOfClips(getRedditJSONText())
 
+clip_list = getListOfClips(getRedditJSONText())
 valid_clip_list = verifiedClipsList(clip_list)
 print(valid_clip_list)
 
