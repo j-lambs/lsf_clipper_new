@@ -1,10 +1,9 @@
 import time
-
-
 import requests
 import re
 import concurrent.futures
 from selenium import webdriver
+from dl_clips import *
 
 # reddit api info
 CLIENT_ID = "***REMOVED***"
@@ -16,8 +15,8 @@ data = {
 	"password" : "***REMOVED***"
 }
 
-# gets a list of strings of the twitch clips
-def getListOfClips(page_html):
+# returns a list of strings of the twitch clips
+def getListOfClips(page_html: str):
 	clips_list = re.findall('data-url=\"(.*?)\"', page_html)
 	#REMOVE NON TWITCH LINKS FROM LIST
 	twitch_only_list = []
@@ -27,19 +26,19 @@ def getListOfClips(page_html):
 	return twitch_only_list
 
 
-#GETS REDDIT JSON TEXT
-def getRedditJSONText():
+# RETURNS REDDIT JSON TEXT
+def getRedditJSONText() -> str:
     headers = {"User-Agent" : "***REMOVED***"}
     res = requests.post("https://www.reddit.com/api/v1/access_token", auth=auth, data=data, headers=headers)
     TOKEN = res.json()["access_token"]
     headers["Authorization"] = f"bearer{TOKEN}"
-    res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=headers, params={'limit' : '100'})
+    res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=headers, params={'limit' : '6'}) # limit is actually limit -1
     return res.text
 
 # checks if clip is missing or not
 # true = clip still public
 # false = clip deleted or taken down 
-def verifyClip(url):
+def verifyClip(url: str):
 	# makes selenium 'headless' (NO UI)
 	options = webdriver.FirefoxOptions()
 	options.headless = True
@@ -47,31 +46,31 @@ def verifyClip(url):
 	driver = webdriver.Firefox(options=options)
 	driver.get(url=url)
 
-	time.sleep(0.2) # need to wait to see if change to clip_missing page
+	time.sleep(1.25) # need to wait to see if change to clip_missing page
 
 	current_url = driver.current_url
 	driver.close() # close selenium window
 	if current_url == url:
 		return True
 	return False
-	
+
+# verifies clips in clip_list and appends valid clips to valid_clip_list
+# returns valid_clip_list
+def verifiedClipsList(clip_list: list):
+	valid_clip_list = []
+	for my_url in clip_list:
+		if verifyClip(my_url):
+			valid_clip_list.append(my_url)
+	return valid_clip_list
+
 # main function
-# print(getListOfClips(getRedditJSONText()))
-
-clip_list = ["https://clips.twitch.tv/GrossWonderfulElephantDuDudu", "https://clips.twitch.tv/GoldenVastLardMrDestructoid-ZI9pmwNIxd2bs6qU", 'https://clips.twitch.tv/ResourcefulBlazingOrangeRickroll-_h6gwcP1trSICki6', 'https://clips.twitch.tv/BreakableAgileStarTinyFace-3Hy5uA8IrxRcHyH9', 'https://clips.twitch.tv/ApatheticDeafDeerBrokeBack-TZdRX-muKwkcMfxj', 'https://clips.twitch.tv/CrunchyBreakableRedpandaMVGame-ShiYzEMiIJSQJAAR']
-
-# multiprocess test
 start_time = time.time()
-with concurrent.futures.ProcessPoolExecutor() as executor:
-	results = executor.map(verifyClip, clip_list)
-	for res in results:
-		print(res)
+clip_list = getListOfClips(getRedditJSONText())
 
-# execution timer
-print("Process finished --- %s seconds ---" % (time.time() - start_time))
+valid_clip_list = verifiedClipsList(clip_list)
+print(valid_clip_list)
 
-# one at a time
-start_time = time.time()
-for i in clip_list:
-	verifyClip(i)
+my_mp4_list = twDLLinkList(valid_clip_list)
+print(my_mp4_list)
+
 print("Process finished --- %s seconds ---" % (time.time() - start_time))
