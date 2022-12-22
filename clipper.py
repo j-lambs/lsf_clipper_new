@@ -3,7 +3,8 @@ start_time = time.time()
 
 import requests
 import re
-import urllib.request
+
+from selenium import webdriver
 
 # reddit api info
 CLIENT_ID = "***REMOVED***"
@@ -34,12 +35,31 @@ def getRedditJSONText():
     headers["Authorization"] = f"bearer{TOKEN}"
     res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=headers, params={'limit' : '100'})
     return res.text
- 
 
+# checks if clip is missing or not
+# true = clip still public
+# false = clip deleted or taken down 
+def checkClipValidity(url):
+	# makes selenium 'headless' (NO UI)
+	options = webdriver.FirefoxOptions()
+	options.headless = True
+	# opens new selenium window
+	driver = webdriver.Firefox(options=options)
+	driver.get(url=url)
+
+	time.sleep(1) # need to wait to see if change to clip_missing page
+
+	current_url = driver.current_url
+	driver.close() # close selenium window
+	if current_url == url:
+		return True
+	return False
+	
 # main function
 # print(getListOfClips(getRedditJSONText()))
-request = urllib.request.urlopen(url="https://clips.twitch.tv/GrossWonderfulElephantDuDudu",timeout=3)
-# resp = urllib.request.urlopen(request, timeout=3)
-print(request.geturl())
 
+print(checkClipValidity("https://clips.twitch.tv/GrossWonderfulElephantDuDudu"))
+print(checkClipValidity("https://clips.twitch.tv/GoldenVastLardMrDestructoid-ZI9pmwNIxd2bs6qU"))
+
+# execution timer
 print("Process finished --- %s seconds ---" % (time.time() - start_time))
