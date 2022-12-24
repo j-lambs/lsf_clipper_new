@@ -3,7 +3,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import requests
+import os
+import time
 
+def get_YYYY_MM_DD_Hr_Min():
+    today = time.strftime("%Y-%m-%d-%H-%M")
+    return today
 
 def genTwClipsDLLink(clip_url: str):
     """
@@ -56,11 +61,14 @@ def downloadMP4(url, title):
     downloads single mp4 from web.
     downloads end in Downloads directory
     """
-    name = title + ".mp4"
+    file_name = title + ".mp4"
     r = requests.get(url)
     print("****Connected****")
-    f = open(f'/Users/rellamas/Downloads/{name}', 'wb')
-    print("Donloading.....")
+
+    dateAndTime = get_YYYY_MM_DD_Hr_Min()
+    os.mkdir('/Users/rellamas/Downloads/' + dateAndTime) # makes new directory
+    f = open(f'/Users/rellamas/Downloads/{dateAndTime}/{file_name}', 'wb') # videos downloaded here
+    print("Downloading.....")
     for chunk in r.iter_content(chunk_size=255): 
         if chunk: # filter out keep-alive new chunks
             f.write(chunk)
@@ -68,9 +76,11 @@ def downloadMP4(url, title):
     f.close()
 
 
-
 def download_list_of_MP4s(mp4List: list):
     """
     downloads a from a list of links to MP4s
     """
     [downloadMP4(clipElement[0], clipElement[1]) for clipElement in mp4List]
+
+
+
