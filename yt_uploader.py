@@ -14,7 +14,9 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.http import MediaFileUpload
+import socket
 
+socket.setdefaulttimeout(30000)
 
 
 # Authenticate with the Google API
@@ -33,18 +35,19 @@ def get_authenticated_service():
 	return build(API_SERVICE_NAME, API_VERSION, credentials = credentials)
 
 
-def uploadVideo():
+def uploadVideo(title: str, pathToVid: str):
 	# Create a service object
 	service = get_authenticated_service()
 
 	# Define the video metadata
-	video_title = 'testing...'
-	video_description = 'This is a video I uploaded with the YouTube API'
+	video_title = title
+	video_description = ''
 	video_tags = ['twitch', 'clips', 'lsf', 'forsen', 'xqc', 'dua lipa']
-	video_category = 'Gaming'  # See https://developers.google.com/youtube/v3/docs/videoCategories/list
+	video_category = '20' #gaming hopefully  # See https://developers.google.com/youtube/v3/docs/videoCategories/list
+	privacy_status = 'private'
 
 	# Define the file you want to upload
-	video_file = '/Users/rellamas/Downloads/good one mr fors.mp4'
+	video_file = pathToVid + title + '.mp4'
 
 	# Create a request to upload the video
 	request = service.videos().insert(
@@ -57,7 +60,7 @@ def uploadVideo():
 				'categoryId': video_category
 			},
 			'status': {
-				'privacyStatus': 'private'
+				'privacyStatus': privacy_status
 			}
 		},
 		media_body = video_file
@@ -69,3 +72,18 @@ def uploadVideo():
 		print(response)
 	except HttpError as error:
 		print(f'An error occurred: {error}')
+
+def uploadVidList(mp4List: list, pathToVidsDir: str):
+	"""
+	loop through list of videos and uploads them
+	"""
+	for mp4 in mp4List:
+		title = mp4[1]
+		uploadVideo(title, pathToVidsDir)
+		time.sleep(300)
+
+
+
+# vidlist = [('https://clips-media-assets2.twitch.tv/qCkdBQBUzbWPapaEh0575w/AT-cm%7CqCkdBQBUzbWPapaEh0575w.mp4', '8th grade social studies PagMan'), ('https://clips-media-assets2.twitch.tv/J-bI1F7QPez8Lu9A0gVxxw/AT-cm%7CJ-bI1F7QPez8Lu9A0gVxxw.mp4', 'Crowding')]
+
+# uploadVidList(vidlist, '/Users/rellamas/Downloads/2022-12-24-07-08/')

@@ -4,7 +4,8 @@ import requests
 import re
 import concurrent.futures
 from selenium import webdriver
-from dl_clips import *
+import dl_clips
+import yt_uploader
 
 # reddit api info
 auth = requests.auth.HTTPBasicAuth(config.CLIENT_ID, config.SECRET_KEY)
@@ -21,11 +22,11 @@ def getListOfClips(page_html: str):
 
 
 # RETURNS REDDIT JSON TEXT
-def getRedditJSONText(numPosts: int) -> str:
+def getRedditJSONText(numPosts: int, redditLinkToScrape) -> str:
     res = requests.post("https://www.reddit.com/api/v1/access_token", auth=auth, data=config.data, headers=config.headers)
     TOKEN = res.json()["access_token"]
     config.headers["Authorization"] = f"bearer{TOKEN}"
-    res = requests.get("https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day", headers=config.headers, params={'limit' : f'{numPosts}'}) # limit is actually limit -1
+    res = requests.get(redditLinkToScrape, headers=config.headers, params={'limit' : f'{numPosts}'})
     return res.text
 
 # checks if clip is missing or not
@@ -59,15 +60,23 @@ def verifiedClipsList(clip_list: list):
 # main function
 start_time = time.time()
 
-numPosts = 3
-clip_list = getListOfClips(getRedditJSONText(numPosts))
+# reddit stuff
+numPosts = 2
+redditLinkToScrape = "https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day"
+clip_list = getListOfClips(getRedditJSONText(numPosts, redditLinkToScrape))
+
+# verify on twitch
 valid_clip_list = verifiedClipsList(clip_list)
 print(valid_clip_list)
 print()
 
-# my_mp4_list = twDLLinkList(valid_clip_list) # list includes links and title as tuple
-# print(my_mp4_list)
+# downloading
+my_mp4_list =  dl_clips.twDLLinkList(valid_clip_list) # list includes links[0] and title[1] as tuple
+print(my_mp4_list)
+dateAndTime = dl_clips.get_YYYY_MM_DD_Hr_Min()
+dl_clips.download_list_of_MP4s(my_mp4_list, dateAndTime)
 
-# download_list_of_MP4s(my_mp4_list)
+# uploading
+yt_uploader.uploadVidList(my_mp4_list, pathToVidsDir= f'{dl_clips.get_path_to_DL()}{dateAndTime}/')
 
 print("Process finished --- %s seconds ---" % (time.time() - start_time))
