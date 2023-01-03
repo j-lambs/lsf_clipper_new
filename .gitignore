@@ -2,3 +2,4 @@ config.py
 geckodriver.log
 __pycache__
 client_secrets.json
+token.pickle

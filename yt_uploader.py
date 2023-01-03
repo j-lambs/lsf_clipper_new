@@ -15,6 +15,8 @@ from googleapiclient.errors import HttpError
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.http import MediaFileUpload
 import socket
+import pickle
+from google.auth.transport.requests import Request
 
 socket.setdefaulttimeout(30000)
 
@@ -26,12 +28,36 @@ SCOPES = ['https://www.googleapis.com/auth/youtube.upload']
 API_SERVICE_NAME = 'youtube'
 API_VERSION = 'v3'
 
+pickleFile = 'token.pickle'
+
 # Get credentials
+# Pickle stuff taken from https://youtu.be/vQQEaSnQ_bs?t=1666
 def get_authenticated_service():
-	flow = InstalledAppFlow.from_client_secrets_file(
-						CLIENT_SECRETS_FILE, SCOPES)
-						
-	credentials = flow.run_local_server(port=8080)
+	credentials = None
+	# token.pickle stores the user's credentials from previously successful logins
+	
+	if os.path.exists(pickleFile):
+		print('Loading Credentials From File...') 
+		with open(pickleFile, 'rb') as token:
+			credentials = pickle.load(token)
+
+	# If there are no valid credentials available, then either refresh the token or log in.
+	if not credentials or not credentials.valid:
+		if credentials and credentials.expired and credentials.refresh_token:
+			print('Refreshing Access token...')
+			credentials.refresh(Request())
+		else:
+			print('Fetching new tokens...')
+			flow = InstalledAppFlow.from_client_secrets_file(
+								CLIENT_SECRETS_FILE, SCOPES)
+								
+			credentials = flow.run_local_server(port=8080)
+			
+			# Save the credentials for the next run
+			with open(pickleFile, 'wb') as f:
+				print('Saving Credentials for Future Use...')
+				pickle.dump(credentials, f)
+			
 	return build(API_SERVICE_NAME, API_VERSION, credentials = credentials)
 
 
@@ -80,10 +106,8 @@ def uploadVidList(mp4List: list, pathToVidsDir: str):
 	for mp4 in mp4List:
 		title = mp4[1]
 		uploadVideo(title, pathToVidsDir)
-		time.sleep(300)
+		time.sleep(100)
 
+my_tup_list = [('shut up','THE QUEEN HAS SPOKEN'), ('lol', 'The Zitt Really has to Poop')]
 
-
-# vidlist = [('https://clips-media-assets2.twitch.tv/qCkdBQBUzbWPapaEh0575w/AT-cm%7CqCkdBQBUzbWPapaEh0575w.mp4', '8th grade social studies PagMan'), ('https://clips-media-assets2.twitch.tv/J-bI1F7QPez8Lu9A0gVxxw/AT-cm%7CJ-bI1F7QPez8Lu9A0gVxxw.mp4', 'Crowding')]
-
-# uploadVidList(vidlist, '/Users/rellamas/Downloads/2022-12-24-07-08/')
+uploadVidList(mp4List=my_tup_list, pathToVidsDir='/Users/rellamas/Downloads/nah/')

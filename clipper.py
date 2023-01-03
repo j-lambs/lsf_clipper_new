@@ -61,7 +61,7 @@ def verifiedClipsList(clip_list: list):
 start_time = time.time()
 
 # reddit stuff
-numPosts = 2
+numPosts = 11
 redditLinkToScrape = "https://www.reddit.com/r/LivestreamFail/top/?sort=top&t=day"
 clip_list = getListOfClips(getRedditJSONText(numPosts, redditLinkToScrape))
 
@@ -77,6 +77,6 @@ dateAndTime = dl_clips.get_YYYY_MM_DD_Hr_Min()
 dl_clips.download_list_of_MP4s(my_mp4_list, dateAndTime)
 
 # uploading
-yt_uploader.uploadVidList(my_mp4_list, pathToVidsDir= f'{dl_clips.get_path_to_DL()}{dateAndTime}/')
+# yt_uploader.uploadVidList(my_mp4_list, pathToVidsDir= f'{dl_clips.get_path_to_DL()}{dateAndTime}/')
 
 print("Process finished --- %s seconds ---" % (time.time() - start_time))
