@@ -52,9 +52,15 @@ def genTwClipsDLLink(clip_url: str):
 	clipTitleElement = driver.find_element(By.CLASS_NAME, 'clip-title')
 	clipTitle = clipTitleElement.get_attribute('innerHTML')
 	clipTitle = clean_file_name(clipTitle)
+	
+	# get clip broadcaster
+	clipBroadcasterElement = driver.find_element(By.CLASS_NAME, 'clip-broadcaster')
+	clipBroadcaster = clipBroadcasterElement.get_attribute('innerHTML')
+	clipBroadcaster = clean_file_name(clipBroadcaster)
+	clipBroadcasterLink = 'https://twitch.tv/' + clipBroadcaster
 
 	driver.quit()
-	return (mp4link, clipTitle)
+	return (mp4link, clipTitle, clipBroadcasterLink)
 
 def clean_file_name(file_name: str):
 	newFileName = file_name.replace('/', '-')
@@ -99,5 +105,3 @@ def download_list_of_MP4s(mp4List: list, dateAndTime: str):
 	"""
 	myMkDir(dateAndTime)
 	[downloadMP4(clipElement[0], clipElement[1], dateAndTime) for clipElement in mp4List]
-
-

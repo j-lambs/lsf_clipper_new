@@ -3441,3 +3441,322 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://127.0.0.1:50498/devtools/browser/247ad593-01a9-4c40-b418-8c58742cb542
 1672532790219	Marionette	INFO	Stopped listening on port 50503
 JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672748842919	geckodriver	INFO	Listening on 127.0.0.1:49774
+1672748843347	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "49775" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofile8HTC0V"
+*** You are running in headless mode.
+1672748844650	Marionette	INFO	Marionette enabled
+1672748844695	Marionette	INFO	Listening on port 49780
+Read port: 49780
+WebDriver BiDi listening on ws://127.0.0.1:49775
+Read port: 49780
+1672748846506	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofile8HTC0V/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49775/devtools/browser/7743cb93-386a-4724-aaa4-44aadbccbfc9
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672748864558	Marionette	INFO	Stopped listening on port 49780
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672748866245	geckodriver	INFO	Listening on 127.0.0.1:49855
+1672748866759	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "49856" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilefF8j7z"
+*** You are running in headless mode.
+1672748868134	Marionette	INFO	Marionette enabled
+1672748868479	Marionette	INFO	Listening on port 49861
+Read port: 49861
+Read port: 49861
+WebDriver BiDi listening on ws://127.0.0.1:49856
+1672748870076	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilefF8j7z/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49856/devtools/browser/3067ca34-e62c-4b08-9565-09ddf571467a
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672748883996	Marionette	INFO	Stopped listening on port 49861
+1672748885435	geckodriver	INFO	Listening on 127.0.0.1:49936
+1672748885952	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "49937" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileA3mU0Z"
+*** You are running in headless mode.
+1672748886946	Marionette	INFO	Marionette enabled
+1672748887009	Marionette	INFO	Listening on port 49942
+Read port: 49942
+WebDriver BiDi listening on ws://127.0.0.1:49937
+1672748887996	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileA3mU0Z/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49937/devtools/browser/85a60bb0-4af2-458f-84b1-65fa69091c91
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672748895804	Marionette	INFO	Stopped listening on port 49942
+1672748897940	geckodriver	INFO	Listening on 127.0.0.1:50016
+1672748898460	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50017" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileKTqIoW"
+*** You are running in headless mode.
+1672748899950	Marionette	INFO	Marionette enabled
+1672748900047	Marionette	INFO	Listening on port 50022
+Read port: 50022
+Read port: 50022
+WebDriver BiDi listening on ws://127.0.0.1:50017
+1672748901462	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileKTqIoW/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50017/devtools/browser/60fda302-df51-4012-ad42-2dfa4aab6afd
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672748914769	Marionette	INFO	Stopped listening on port 50022
+1672748916663	geckodriver	INFO	Listening on 127.0.0.1:50097
+1672748917193	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50098" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileP8lUjw"
+*** You are running in headless mode.
+1672748918626	Marionette	INFO	Marionette enabled
+1672748918666	Marionette	INFO	Listening on port 50103
+Read port: 50103
+WebDriver BiDi listening on ws://127.0.0.1:50098
+1672748919747	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileP8lUjw/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50098/devtools/browser/b324fc5e-5d10-4921-9efc-031bc7fc7b48
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672748929973	Marionette	INFO	Stopped listening on port 50103
+1672748932153	geckodriver	INFO	Listening on 127.0.0.1:50171
+1672748932658	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50172" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileVzbQvQ"
+*** You are running in headless mode.
+1672748933599	Marionette	INFO	Marionette enabled
+1672748933635	Marionette	INFO	Listening on port 50177
+Read port: 50177
+WebDriver BiDi listening on ws://127.0.0.1:50172
+1672748934563	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileVzbQvQ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50172/devtools/browser/fa92a3b9-1951-4732-a7a9-329432c670d0
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672748943272	Marionette	INFO	Stopped listening on port 50177
+1672748945179	geckodriver	INFO	Listening on 127.0.0.1:50256
+1672748945698	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50257" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilegKhqK2"
+*** You are running in headless mode.
+1672748946570	Marionette	INFO	Marionette enabled
+1672748946622	Marionette	INFO	Listening on port 50262
+Read port: 50262
+WebDriver BiDi listening on ws://127.0.0.1:50257
+1672748947518	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilegKhqK2/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50257/devtools/browser/89240d7f-4215-4a85-9c81-ba016f45d59f
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672748957009	Marionette	INFO	Stopped listening on port 50262
+1672748958491	geckodriver	INFO	Listening on 127.0.0.1:50336
+1672748959008	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50337" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofile3317NV"
+*** You are running in headless mode.
+1672748960028	Marionette	INFO	Marionette enabled
+1672748960084	Marionette	INFO	Listening on port 50342
+Read port: 50342
+WebDriver BiDi listening on ws://127.0.0.1:50337
+1672748960975	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofile3317NV/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50337/devtools/browser/3bb52de4-be3f-4efb-b585-7f53e6438dd6
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672748968886	Marionette	INFO	Stopped listening on port 50342
+1672748970875	geckodriver	INFO	Listening on 127.0.0.1:50413
+1672748971389	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50414" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileXQeMPp"
+*** You are running in headless mode.
+1672748972473	Marionette	INFO	Marionette enabled
+1672748972532	Marionette	INFO	Listening on port 50419
+Read port: 50419
+WebDriver BiDi listening on ws://127.0.0.1:50414
+1672748973499	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileXQeMPp/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50414/devtools/browser/313b281e-7c7f-41e0-835d-374dd7507e35
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672748983011	Marionette	INFO	Stopped listening on port 50419
+1672748985287	geckodriver	INFO	Listening on 127.0.0.1:50492
+1672748985798	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50493" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileH9GnKO"
+*** You are running in headless mode.
+1672748987130	Marionette	INFO	Marionette enabled
+1672748987332	Marionette	INFO	Listening on port 50499
+Read port: 50499
+WebDriver BiDi listening on ws://127.0.0.1:50493
+1672748988341	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileH9GnKO/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50493/devtools/browser/7798cae2-13e3-482b-a200-5a0451b06364
+1672748994297	Marionette	INFO	Stopped listening on port 50499
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672748995800	geckodriver	INFO	Listening on 127.0.0.1:50548
+1672748996326	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50549" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileQM6ptf"
+*** You are running in headless mode.
+1672748998314	Marionette	INFO	Marionette enabled
+1672748998494	Marionette	INFO	Listening on port 50554
+Read port: 50554
+Read port: 50554
+WebDriver BiDi listening on ws://127.0.0.1:50549
+1672749000710	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileQM6ptf/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50549/devtools/browser/3c913a00-4ab1-4569-8a98-b39d8435d317
+1672749007331	Marionette	INFO	Stopped listening on port 50554
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672749008468	geckodriver	INFO	Listening on 127.0.0.1:50607
+1672749008985	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50608" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilePB2O2e"
+*** You are running in headless mode.
+1672749010247	Marionette	INFO	Marionette enabled
+1672749010294	Marionette	INFO	Listening on port 50613
+Read port: 50613
+Read port: 50613
+WebDriver BiDi listening on ws://127.0.0.1:50608
+1672749011813	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilePB2O2e/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50608/devtools/browser/1a74b8c6-dfc8-4323-afe9-cc5462a0f19c
+1672749017849	Marionette	INFO	Stopped listening on port 50613
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672749019081	geckodriver	INFO	Listening on 127.0.0.1:50666
+1672749019596	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50667" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileBmyJSL"
+*** You are running in headless mode.
+1672749021234	Marionette	INFO	Marionette enabled
+1672749021316	Marionette	INFO	Listening on port 50672
+Read port: 50672
+WebDriver BiDi listening on ws://127.0.0.1:50667
+Read port: 50672
+1672749022651	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileBmyJSL/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50667/devtools/browser/f972ee13-20da-4e97-87c5-ef66321ed299
+1672749028436	Marionette	INFO	Stopped listening on port 50672
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672749029587	geckodriver	INFO	Listening on 127.0.0.1:50722
+1672749030106	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50723" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilerfI0Dd"
+*** You are running in headless mode.
+1672749031564	Marionette	INFO	Marionette enabled
+1672749031599	Marionette	INFO	Listening on port 50728
+Read port: 50728
+WebDriver BiDi listening on ws://127.0.0.1:50723
+Read port: 50728
+1672749033055	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilerfI0Dd/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50723/devtools/browser/82b583b2-f1b7-4784-bafc-3557b99296e9
+1672749040276	Marionette	INFO	Stopped listening on port 50728
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672749041893	geckodriver	INFO	Listening on 127.0.0.1:50780
+1672749042407	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50781" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilehz8EZi"
+*** You are running in headless mode.
+1672749043737	Marionette	INFO	Marionette enabled
+1672749043831	Marionette	INFO	Listening on port 50786
+Read port: 50786
+WebDriver BiDi listening on ws://127.0.0.1:50781
+1672749044738	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilehz8EZi/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50781/devtools/browser/85737816-116f-45a1-99f3-44a6532be047
+1672749049707	Marionette	INFO	Stopped listening on port 50786
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672749050643	geckodriver	INFO	Listening on 127.0.0.1:50837
+1672749051153	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50838" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilerF7O6v"
+*** You are running in headless mode.
+1672749052148	Marionette	INFO	Marionette enabled
+1672749052416	Marionette	INFO	Listening on port 50843
+Read port: 50843
+WebDriver BiDi listening on ws://127.0.0.1:50838
+1672749053196	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofilerF7O6v/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50838/devtools/browser/a458af58-1e2a-4733-91f5-9625a4b9073e
+1672749058239	Marionette	INFO	Stopped listening on port 50843
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672749059201	geckodriver	INFO	Listening on 127.0.0.1:50893
+1672749059714	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50894" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileR19Cs7"
+*** You are running in headless mode.
+1672749060674	Marionette	INFO	Marionette enabled
+1672749060786	Marionette	INFO	Listening on port 50899
+Read port: 50899
+WebDriver BiDi listening on ws://127.0.0.1:50894
+1672749061562	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileR19Cs7/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50894/devtools/browser/de5e51a5-55b9-4e14-8f49-2ac9b9c7861a
+1672749067270	Marionette	INFO	Stopped listening on port 50899
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672749069387	geckodriver	INFO	Listening on 127.0.0.1:50952
+1672749069902	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "50953" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileljM24n"
+*** You are running in headless mode.
+1672749071076	Marionette	INFO	Marionette enabled
+1672749071219	Marionette	INFO	Listening on port 50958
+Read port: 50958
+WebDriver BiDi listening on ws://127.0.0.1:50953
+1672749072155	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileljM24n/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50953/devtools/browser/0ec65adb-8b74-4666-baa5-e97282354087
+1672749077204	Marionette	INFO	Stopped listening on port 50958
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672749572224	geckodriver	INFO	Listening on 127.0.0.1:51059
+1672749572728	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "51060" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileZPPL6R"
+*** You are running in headless mode.
+1672749573796	Marionette	INFO	Marionette enabled
+1672749573837	Marionette	INFO	Listening on port 51065
+Read port: 51065
+Read port: 51065
+WebDriver BiDi listening on ws://127.0.0.1:51060
+1672749575396	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileZPPL6R/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51060/devtools/browser/e8763171-dce8-4a68-9f68-f73d64e48789
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672749584229	Marionette	INFO	Stopped listening on port 51065
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1106: Error: Sqlite.sys.mjs has been shutdown. Cannot open connection to: /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileZPPL6R/protections.sqlite
+1672749585933	geckodriver	INFO	Listening on 127.0.0.1:51135
+1672749586444	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "51136" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileofjIsz"
+*** You are running in headless mode.
+1672749587608	Marionette	INFO	Marionette enabled
+1672749587671	Marionette	INFO	Listening on port 51141
+Read port: 51141
+WebDriver BiDi listening on ws://127.0.0.1:51136
+Read port: 51141
+1672749589186	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileofjIsz/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51136/devtools/browser/26a0becc-9b99-414f-89dc-68ed2aecf8ce
+1672749596103	Marionette	INFO	Stopped listening on port 51141
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+1672749836208	geckodriver	INFO	Listening on 127.0.0.1:51226
+1672749836722	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "51227" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileXo0Wtq"
+*** You are running in headless mode.
+1672749837696	Marionette	INFO	Marionette enabled
+1672749837871	Marionette	INFO	Listening on port 51232
+Read port: 51232
+WebDriver BiDi listening on ws://127.0.0.1:51227
+1672749838644	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileXo0Wtq/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51227/devtools/browser/ba317ca5-9379-4fd4-bac4-95502f944fff
+JavaScript warning: https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672749847617	Marionette	INFO	Stopped listening on port 51232
+1672749850146	geckodriver	INFO	Listening on 127.0.0.1:51305
+1672749850656	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "51306" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileqzM5EM"
+*** You are running in headless mode.
+1672749852010	Marionette	INFO	Marionette enabled
+1672749852223	Marionette	INFO	Listening on port 51311
+Read port: 51311
+WebDriver BiDi listening on ws://127.0.0.1:51306
+1672749853172	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/16/6ps3p0fj73l5h23f_9ng0fh80000gn/T/rust_mozprofileqzM5EM/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51306/devtools/browser/a4bb754b-f2d8-4471-b55c-51cfc24305fc
+1672749858428	Marionette	INFO	Stopped listening on port 51311
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed

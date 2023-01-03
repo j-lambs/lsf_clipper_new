@@ -61,16 +61,16 @@ def get_authenticated_service():
 	return build(API_SERVICE_NAME, API_VERSION, credentials = credentials)
 
 
-def uploadVideo(title: str, pathToVid: str):
+def uploadVideo(title: str, description: str, pathToVid: str):
 	# Create a service object
 	service = get_authenticated_service()
 
 	# Define the video metadata
 	video_title = title
-	video_description = ''
+	video_description = description
 	video_tags = ['twitch', 'clips', 'lsf', 'forsen', 'xqc', 'dua lipa']
 	video_category = '20' #gaming hopefully  # See https://developers.google.com/youtube/v3/docs/videoCategories/list
-	privacy_status = 'private'
+	privacy_status = 'public'
 
 	# Define the file you want to upload
 	video_file = pathToVid + title + '.mp4'
@@ -105,9 +105,6 @@ def uploadVidList(mp4List: list, pathToVidsDir: str):
 	"""
 	for mp4 in mp4List:
 		title = mp4[1]
-		uploadVideo(title, pathToVidsDir)
-		time.sleep(100)
-
-my_tup_list = [('shut up','THE QUEEN HAS SPOKEN'), ('lol', 'The Zitt Really has to Poop')]
-
-uploadVidList(mp4List=my_tup_list, pathToVidsDir='/Users/rellamas/Downloads/nah/')
+		description = mp4[2]
+		uploadVideo(title=title, description=description, pathToVid=pathToVidsDir)
+		time.sleep(60)
